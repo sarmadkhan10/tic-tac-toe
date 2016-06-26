@@ -1,0 +1,10 @@
+{
+  "name": "tic-tac-toe",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  }
+}

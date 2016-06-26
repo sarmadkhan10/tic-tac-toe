@@ -1,0 +1,49 @@
+<head>
+  
+</head>
+
+<body>
+  
+</body>
+
+<template name="main_layout_template">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Play</a></li>
+        <li><a href="/highscores">High Scores</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  {{> yield }}
+</template>
+
+<template name="play_template">
+  <div class="container">
+    <p>Welcome to tic-tac-toe!</p>
+    <p>Player {{player}}</p>
+
+    {{> tic_tac_toe}}
+  </div>
+</template>
+
+<template name="tic_tac_toe">
+  <div id="board">
+    <div class="row">
+      <div class="col-xs-4 rectangle" id="rect_1_1"></div>
+      <div class="col-xs-4 rectangle" id="rect_1_2"></div>
+      <div class="col-xs-4 rectangle" id="rect_1_3"></div>
+    </div> <!-- row -->
+    <div class="row">
+      <div class="col-xs-4 rectangle" id="rect_2_1"></div>
+      <div class="col-xs-4 rectangle" id="rect_2_2"></div>
+      <div class="col-xs-4 rectangle" id="rect_2_3"></div>
+    </div> <!-- row -->
+    <div class="row">
+      <div class="col-xs-4 rectangle" id="rect_3_1"></div>
+      <div class="col-xs-4 rectangle" id="rect_3_2"></div>
+      <div class="col-xs-4 rectangle" id="rect_3_3"></div>
+    </div> <!-- row -->
+  </div> <!-- board -->
+</template>
