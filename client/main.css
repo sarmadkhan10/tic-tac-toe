@@ -11,3 +11,15 @@
 	line-height: 100px;
 	font-size: 300%;
 }
+
+table, th, td {
+    text-align: center;
+}
+
+.table-name {
+	width: 30%;
+}
+
+.table-score {
+	width: 10%;
+}

@@ -22,9 +22,34 @@
 <template name="play_template">
   <div class="container">
     <p>Welcome to tic-tac-toe!</p>
-    <p>Player {{player}}</p>
+
+    {{#unless gameStarted}}
+    {{> usernames_template}}
+    {{/unless}}
+
+    {{#if gameStarted}}
+    <br>
+    <p><b>{{player}}</b>, it's your turn.</p>
+    <br>
 
     {{> tic_tac_toe}}
+
+    <br>
+    <div>{{result}}</div>
+    {{/if}}
+  </div>
+</template>
+
+<template name="usernames_template">
+  <div>
+    <p>Enter your usernames:</p>
+    <form class="js_usernames form-inline">
+      <div class="form-group">
+        <input type="text" name="player1" placeholder="Player 1" />
+        <input type="text" name="player2" placeholder="Player 2" />
+        <input type="submit" class="btn">
+      </div>
+    </form>
   </div>
 </template>
 
